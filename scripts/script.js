@@ -1,7 +1,5 @@
 /*************************************************
  Title              : Alien Game
- Name               : Denis Lim [BCIT TWD-26]
- Instructor         : Jason Harrison
  Development Tools  : HTML, CSS, Javascript, Ajax 
  *************************************************/
 
