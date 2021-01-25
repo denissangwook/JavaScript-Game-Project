@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SF873VK7PP"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-SF873VK7PP');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JavaScript Project : Alien Game</title>
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="images/favicon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="images/favicon/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Goldman&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <p id="myparagraph"></p>
+    <div class="intro-popup" id="intro-popup">
+        <div class="intro-popup-content" id="intro-popup-content">
+            <div class="popup-text intro-popup-text">
+                <h2>How to play?</h2>
+                <p><span>Start&nbsp;&#58;</span>&nbsp;Enter&#40;&#8629;&#41;</p>
+                <p><span>Jump&nbsp;&#58;</span>&nbsp;ArrowUp&#40;&#8593;&#41;</p>
+                <p><span>Move Right&nbsp;&#58;</span>&nbsp;ArrowRight&#40;&#8594;&#41;</p>
+                <p><span>Move Left&nbsp;&#58;</span>&nbsp;ArrowLeft&#40;&#8592;&#41;</p>
+            </div>
+            <div class="btn-container">
+                <button class="btn  btn-start" id="btn-start">
+                    <span class="btn-text">Start</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="opening-screen" id="opening-screen">
+    </div>
+    <div class="opening-screen" id="opening-screen">
+        <div class="opening-image" id="opening-image">
+        </div>
+    </div>
+    <div class="points">
+        <p>Points:</p>
+        <p id="point">00</p>
+    </div>
+    <div class="time-check">
+        <p>Time:</p>
+        <p id="time">60</p>
+    </div>
+    <div class="audio">
+        <button id="btn-audio-on" class="btn-play">
+            <span class="btn-play-image">
+                <img src="images/images/audio-on.png" alt="audio on" class="audio-on">
+            </span>
+            <span class="btn-mute-text">Mute Audio</span>
+        </button>
+        <button id="btn-audio-off" class="btn-mute">
+            <span class="btn-mute-image">
+                <img src="images/images/audio-off.png" alt="audio off" class="audio-off">
+            </span>
+            <span class="btn-play-text">Play Audio</span>
+        </button>
+    </div>
+    <div class="end-popup" id="end-popup">
+        <div class="end-popup-content" id="end-popup-content">
+            <div class="popup-text end-popup-text">
+                <h2 style="text-align: center;">Play again?</h2>
+            </div>
+            <div class="btn-container">
+                <button class="btn  btn-start" id="play-again">
+                    <span class="btn-text">Yes</span>
+                </button>
+                <button class="btn  btn-start" id="play-end">
+                    <span class="btn-text">No</span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="ajax-popup" id="ajax-popup">
+        <div class="ajax-popup-content" id="ajax-popup-content">
+            <div class="popup-text ajax-popup-text">
+                <p id="ending-message"></p>
+            </div>
+            <div class="popup-text ajax-popup-text">
+                <p class="educational-notice">Developed by Denis Lim. For Educational Purposes Only</p>
+            </div>
+        </div>
+    </div>
+    <img src="images/alien/alienrwalk0.gif" alt="alien stands on the ground" id="thealien"
+        style="position:absolute;bottom:10px;left:0px;">
+    <img src="images/images/earth-rock-small.png" alt="small size rock is on the ground" id="earth-rock-small"
+        style="position:absolute;bottom:10px;left:300px;">
+    <img src="images/images/earth-rock-medium.png" alt="medium size rock is on the ground" id="earth-rock-medium"
+        style="position:absolute;bottom:10px;left:600px;">
+    <img src="images/images/earth-rock-large.png" alt="large size rock is on the ground" id="earth-rock-large"
+        style="position:absolute;bottom:10px;left:1200px;">
+
+    <!-- Game Music -->
+    <audio id="music-opening">
+        <source src="media/opening.mp3">
+    </audio>
+    <audio id="music-kick">
+        <source src="media/kick.mp3">
+    </audio>
+    <audio id="music-ending">
+        <source src="media/end-game.mp3">
+    </audio>
+    <audio id="music-play-again">
+        <source src="media/game-again.mp3">
+    </audio>
+    <audio id="music-bomb">
+        <source src="media/bomb.mp3">
+    </audio>
+    <audio id="music-boom">
+        <source src="media/boom.mp3">
+    </audio>
+    <audio id="music-scream">
+        <source src="media/scream.mp3">
+    </audio>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="./scripts/script.js"></script>
+</body>
+
+</html>
